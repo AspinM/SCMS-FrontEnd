@@ -1,0 +1,258 @@
+.welcomemain {
+    /* border: 2px solid black; */
+    background-color: var(--background-color);
+
+    background-image: url('../../../SetldImages/welcomeScreenpattern\'.png');
+    background-repeat: no-repeat;
+    background-size: 60% 100%;
+    padding: 50px 0 0 100px;
+    height: 100vh;
+}
+
+.welcometotxt {
+    color: #FFF;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1.12px;
+}
+
+.starttxt {
+    margin-top: 30px;
+    color: #FFF;
+    font-size: 62px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    /* 83.871% */
+    letter-spacing: 2.48px;
+}
+
+.groupimg {
+    position: absolute;
+    margin-top: 15px;
+}
+
+.welcometxt {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 28px;
+    /* 155.556% */
+    letter-spacing: 0.72px;
+    margin-top: 28px;
+}
+
+.getstartbut {
+    width: 170px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #090080;
+    background-color: #FFF;
+    border-radius: 8px;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+
+.iphoneimg {
+    position: absolute;
+    width: 550px;
+    height: 655px;
+    top: 10% !important;
+    left: 64% !important;
+}
+
+.bottomimg {
+    margin-top: 53px;
+    /* border: 2px solid black; */
+    padding: 53px 0px 0px 80px;
+    border-radius: 50px 0px 0px 0px;
+    background-color: #7C7B9F;
+}
+
+.dealcount {
+    background-color: rgba(44, 41, 123, 0.5);
+    border-radius: 5px;
+}
+
+.lendertxt {
+    position: relative;
+    padding: 50px;
+    color: #FFF;
+}
+
+.lendertxt::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: 0;
+    width: 2px;
+    height: 80px;
+    /* Adjust this value to the desired height */
+    background-color: #7A7A7A;
+}
+
+.lendertxt>div>div {
+    font-weight: 100;
+    color: #FFF;
+}
+
+.manypeopletxt {
+    font-weight: 100;
+    color: #FFF;
+}
+
+.lender {
+    color: #FFF;
+
+    position: relative;
+    padding: 50px;
+}
+
+.lender>div>div {
+    font-weight: 100;
+    color: #FFF;
+}
+
+
+/* .bottomimage {
+    width: 1084px;
+    height: 200px;
+} */
+
+
+.tabbottomimg {
+    display: none;
+}
+
+
+
+
+/* Tablet view */
+@media (max-width: 1024px) {
+    .welcomemain {
+        padding: 50px 0 0 50px !important;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .starttxt {
+        font-size: 43px !important;
+        line-height: 52px !important;
+        letter-spacing: 5.5px !important;
+    }
+
+    .welcometotxt {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .welcometxt {
+        font-size: 13px !important;
+        line-height: 28px;
+        margin-top: 20px;
+    }
+
+    .getstartbut {
+        width: 150px;
+        height: 38px;
+        margin-top: 20px !important;
+    }
+
+    .iphoneimg {
+        display: none;
+    }
+
+    .tabbottomimg {
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .bottomimg {
+        margin-top: 30px;
+        /* border: 2px solid black; */
+        padding: 5px 0px 0px 10px;
+        border-radius: 50px 0px 0px 0px;
+        background-color: #7C7B9F;
+        width: 93%;
+    }
+
+    .dealcount {
+        margin: 0px 0px 0px 20px;
+    }
+
+
+    .lendertxt,
+    .lender {
+        padding: 30px;
+    }
+}
+
+/* Mobile view */
+@media only screen and (max-width: 768px) {
+    .welcomemain {
+        padding: 80px 20px 0 20px;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+
+    .starttxt {
+        font-size: 10px ;
+        line-height: 38px;
+        letter-spacing: 1.5px;
+        /* text-align: center; */
+    }
+
+    .welcometotxt {
+        font-size: 13px;
+        line-height: 20px;
+        /* text-align: center; */
+    }
+
+    .welcometxt {
+        font-size: 13px;
+        margin-top: 15px;
+        /* text-align: center; */
+    }
+
+    .getstartbut {
+        width: 140px;
+        height: 36px;
+
+    }
+
+
+
+    .iphoneimg {
+        display: none;
+    }
+
+    .tabbottomimg {
+        display: block;
+    }
+
+    .manypeopletxt {
+        
+        color: #FFF;
+        font-size: small;
+    }
+    
+
+
+
+    .dealcount {
+        padding: 15px;
+    }
+
+    .lendertxt,
+    .lender {
+        padding: 20px;
+    }
+
+}
