@@ -1,0 +1,212 @@
+.headersec {
+  display: flex;
+  padding: 0 100px;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(135, 122, 122);
+}
+
+.gethelp {
+  margin-top: 30px;
+  color: #090080;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 10px;
+}
+
+.stepper {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.trigger {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.circle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--background-color);
+  color: white;
+  line-height: 30px;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  margin-top: 5px;
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background: var(--background-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.panel {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accountdetials {
+  padding: 50px 300px 50px 300px;
+}
+
+
+
+.detialinfo {
+  padding: 50px 100px 50px 100px;
+}
+
+
+
+.button {
+  background-color: #2C297B;
+  /* Custom background color */
+  color: #fff;
+  /* White text color */
+  border-radius: 5px;
+  /* Rounded corners */
+  font-size: 16px;
+  /* Font size */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+  /* Smooth background color transition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 40px;
+}
+
+.button:hover {
+  background-color: #1b1b6e;
+  /* Darker color on hover */
+}
+
+.button:disabled {
+  background-color: #e0e0e0;
+  /* Light grey background for disabled state */
+  color: #a0a0a0;
+  /* Grey text color for disabled state */
+  cursor: not-allowed;
+  /* Not-allowed cursor when disabled */
+}
+
+.backbutton {
+  color: #2C297B;
+  /* White text color */
+  border-radius: 5px;
+  /* Rounded corners */
+  font-size: 16px;
+  /* Font size */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+  /* Smooth background color transition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 40px;
+  border: 1px solid #2C297B;
+}
+
+.kyctxt {
+  color: #090080;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.toensuretxt {
+  color: #575757;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px;
+}
+
+.toensuretxt>span {
+  color: #1b1b6e;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px;
+}
+
+
+@media (max-width: 1024px) {
+  .MuiStepper-root {
+    display: none !important; /* Hides the stepper component */
+  }
+
+  .accountdetials {
+    padding: 20px 50px 20px 50px;
+  }
+
+  .detialinfo {
+    padding: 20px;
+  }
+  .headersec {
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(135, 122, 122);
+  }
+}
+
+
+@media (max-width: 576px) {
+  .MuiStepper-root {
+    display: none !important; /* Hides the stepper component */
+  }
+
+  .accountdetials {
+    padding: 10px 40px 10px 40px;
+  }
+
+  .detialinfo {
+    padding: 20px;
+  }
+}
