@@ -1,0 +1,21 @@
+.dashboardWrapper {
+    min-height: 100vh;
+    background-color: #e1e2e3;
+  }
+  
+  .mainContent {
+    /* No padding here so Header sits flush */
+  }
+  
+  .headerWrapper {
+    margin-bottom: 20px;
+  }
+  
+  .pageContent {
+    margin: 1px 20px;
+    padding: 24px; /* This is where content gets its padding */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -4,8 +4,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { loginApi, otpVerifyApi } from '../ApiService/page';
 import Image from 'next/image';
-import signupimage from '../../../SetldImages/signupimage.png';
-import logo from '../../../SetldImages/logo.png';
+import signupimage from '../../../SCMSImages/medical-people-staff.png';
+import logo from '../../../SCMSImages/SCMS Logo new.png';
 import style from './signIn.module.css';
 import { Modal, Button } from 'react-bootstrap';
 import OTPInput from 'react-otp-input';
@@ -85,10 +85,14 @@ function SignInPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // setLoading(true);
+        setLoading(true);
         // login.mutate({ username, password, identifier });
 
-        router.push('/Components/Common/DashBoardMain'); 
+        setTimeout(() => {
+        router.push('/Components/Common/DashBoardMain');
+            
+        }, 1000);
+
     };
 
     const handleOtpChange = (otp) => {
@@ -118,7 +122,7 @@ function SignInPage() {
     const handleSignUpRedirect = () => {
         setLoading(true);
 
-        router.push('/Components/OnBoardingScreen/SignUp'); 
+        router.push('/Components/OnBoardingScreen/SignUp');
     };
 
     const handleforgetpass = (e) => {
@@ -170,156 +174,103 @@ function SignInPage() {
 
 
     return (
-        <div className={style.signinmain}>
-            <ToastContainer />
-            {loading && <Loader />}
-            <div className={style.submain}>
 
-                <div className={`${style.division1} col-lg-6`}>
-                    <div className={style.signupimgsection}>
+        <>
+        <ToastContainer />
+        {loading && <Loader />}
+            <div className="row m-0 vh-100 overflow-hidden">
+            
+                {/* Left Side */}
+                <div className={`col-lg-6 d-none d-lg-flex flex-column justify-content-center align-items-center px-5 py-4 ${style.leftPanel}`}>
+                    <div className="d-flex flex-column align-items-center text-white">
                         <Image
                             src={signupimage}
                             alt="Signup Image"
-                            className={style.signupimage}
+                            width={500}     // or any size
+                            height={500}
                         />
-                        <p className={style.signuptxt}>
-
-                        </p>
+                        <p className={style.signuptxt}>Welcome to our platform!</p>
                     </div>
                 </div>
 
+                {/* Right Side with Centered Form */}
+                <div className={`col-lg-6 d-flex justify-content-center align-items-center px-4 ${style.rightPanel}`}>
 
-                <div className={style.condent}>
-                    <div>
-                        <div className="d-flex justify-content-center">
+                    <form className="d-flex flex-column w-100 border border-secondary rounded p-6 shadow" onSubmit={handleSubmit} style={{ maxWidth: '500px' }}>
+                        <div className="d-flex justify-content-center mb-2">
                             <Image
-                                src={logo}
+                                src={logo} // Make sure to import logo correctly
                                 alt="Logo"
-                                width={184}
-                                height={24}
+                                width={130}
+                                height={100}
                             />
                         </div>
-                        <div className={style.signintxt}>Sign in</div>
-                        <form className="d-flex flex-column" onSubmit={handleSubmit}>
-                            <div className={`${style.floatingGroup} mb-1`}>
-                                <TextField
-                                    value={username}
-                                    onChange={(e) => setUsername(e.target.value)}
-                                    id="outlined-basic"
-                                    label="User Name"
-                                    variant="outlined"
-                                    className='w-100'
-                                    error={!!usernameError} // Show error state
-                                    helperText={usernameError} // Display error message
-                                />
-                            </div>
-                            <div className={`${style.floatingGroup} mb-1 mt-4`}>
-                                <TextField
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    type="password"
-                                    id="outlined-basic"
-                                    label="Password"
-                                    variant="outlined"
-                                    className='w-100'
-                                    error={!!passwordError} // Show error state
-                                    helperText={passwordError} // Display error message
-                                />
-                            </div>
-                            <FormControl fullWidth className={`mt-4`}>
-                                <InputLabel id="demo-simple-select-label">Organization</InputLabel>
-                                <Select
-                                    labelId="demo-simple-select-label"
-                                    id="demo-simple-select"
-                                    // value={age}
-                                    label="Organization"
-                                    // onChange={handleChange}
-                                >
-                                   <MenuItem value={"Org1"}>Organization 1</MenuItem>
-                                    <MenuItem value={"Org2"}>Organization 2</MenuItem>
-                                    <MenuItem value={"Org3"}>Organization 3</MenuItem>
-                                </Select>
-                            </FormControl>
+                        <h2 className={`fw-bold mb-4 ${style.loginHeading}`}>Sign In</h2>
 
+                        <div className={`mb-1`}>
+                            <TextField
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                id="outlined-basic"
+                                label="User Name"
+                                variant="outlined"
+                                className="w-100"
+                                error={!!usernameError}
+                                helperText={usernameError}
+                            />
+                        </div>
 
-                            <div className={style.forgetpasstxt} >
-                                <span onClick={handleforgetpass}>
-                                    Forgot Password?
-                                </span>
-                            </div>
-                            <div className="d-flex justify-content-center">
-                                <button
-                                    type="submit"
-                                    className={`${style.signupbutton} w-100`}
-                                    disabled={login.isLoading}
-                                >
-                                    {login.isLoading ? 'Signing in...' : 'Sign in'}
-                                </button>
-                            </div>
-                        </form>
-                        <div className={style.termstxt} >
-                            <span onClick={handleterms}>  Terms of Use</span>
+                        <div className={` mb-1 mt-4`}>
+                            <TextField
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                type="password"
+                                id="outlined-basic"
+                                label="Password"
+                                variant="outlined"
+                                className="w-100"
+                                error={!!passwordError}
+                                helperText={passwordError}
+                            />
                         </div>
-                        <div className={style.review} >
-                            <span onClick={handlepolicy}>
-                                Review our Privacy Policy
-                            </span>
+
+                        <FormControl fullWidth className="mt-4">
+                            <InputLabel id="demo-simple-select-label">Organization</InputLabel>
+                            <Select
+                                labelId="demo-simple-select-label"
+                                id="demo-simple-select"
+                                label="Organization"
+                            // value={org}
+                            // onChange={handleOrgChange}
+                            >
+                                <MenuItem value={"Org1"}>Organization 1</MenuItem>
+                                <MenuItem value={"Org2"}>Organization 2</MenuItem>
+                                <MenuItem value={"Org3"}>Organization 3</MenuItem>
+                            </Select>
+                        </FormControl>
+
+                        <div className={style.forgetpasstxt + " mt-3"}>
+                            <span onClick={handleforgetpass}>Forgot Password?</span>
                         </div>
-                    </div>
+
+                        <div className="d-flex justify-content-center mt-4">
+                            <button
+                                type="submit"
+                                className={`${style.loginbutton} w-100`}
+                                disabled={login.isLoading}
+                            >
+                                {login.isLoading ? 'Signing in...' : 'Sign in'}
+                            </button>
+                        </div>
+
+                    </form>
                 </div>
-
-                <div className={`${style.division2} col-lg-4`}></div>
             </div>
 
-            {/* OTP Modal */}
 
 
-            <Modal show={showOtpModal} onHide={handleCloseModal} centered>
-                <Modal.Header closeButton>
 
-                </Modal.Header>
-                <div className={`${style.modelmain}`}>
-
-                    <div className={`${style.verify} d-flex justify-content-center pb-2`}>OTP Verification</div>
-
-
-                    <p className={`${style.verifytxt} mt-2 `}>
-                        Enter your one Time password. We have
-                        sent to &nbsp;
-                        {getFirstThreeCharacters(username)}{username.includes('@') ? '...@gmail' : 'XXXX'} {username.includes('@') ? 'email' : 'message'}.
-                    </p>
-
-
-                    <div className={style.otpfield}>
-                        <OTPInput
-                            value={otp}
-                            onChange={handleOtpChange}
-                            numInputs={4}
-                            separator={<span>-</span>}
-                            isInputNum={true}
-                            inputStyle={{
-                                width: '4rem',
-                                height: '4rem',
-                                margin: '0 0.5rem',
-                                fontSize: '1.5rem',
-                                borderBottom: '2px solid #000',
-                                textAlign: 'center',
-                            }}
-                            renderInput={(props) => <input {...props} />}
-                        />
-                    </div>
-                    <div className={style.codeactive}>
-                        Didn’t receive the OTP? &nbsp;
-                        <span>Resent({formatTime(timeLeft)}s)</span>&nbsp;
-                    </div>
-
-                    {/* Buttons */}
-                    <Button type="button" className={style.verifybutton} onClick={handleOtpSubmit}>
-                        Verify
-                    </Button>
-                </div>
-            </Modal>
-        </div>
+        </>
     );
 }
 

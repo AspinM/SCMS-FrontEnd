@@ -16,8 +16,8 @@ const roboto = Roboto({
                                                                                                         
 
 export const metadata: Metadata = {
-  title: "SETLD WEB APP",
-  description: "SETLD web application",
+  title: "SCMS",
+  description: "SCMS web application",
 };
 
 
