@@ -1,0 +1,62 @@
+/* Scroll container */
+.scrollcontainer {
+    max-height: 76vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+    scrollbar-color: #434190 #e0e0f0;
+  }
+  
+  /* Heading styles */
+  .heading {
+    color: #433de0;
+    font-weight: bold;
+  }
+  
+  .subheading {
+    color: #434190;
+    margin-bottom: 1rem;
+  }
+  
+  /* Card styling */
+  .customCard {
+    background-color: #f0f0fa;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid #e0e0f0;
+  }
+  
+  .customCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(100, 100, 170, 0.25);
+  }
+  
+  .customCard h5 {
+    margin-bottom: 0.25rem;
+    color: #434190;
+  }
+  
+  .customCard p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6464aa;
+  }
+  
+  /* Icon styling */
+  .icon {
+    color: #434190;
+  }
+  
+  /* Table styling */
+  .table {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .table th {
+    background-color: #434190 !important;
+    color: #fff;
+  }
+  
