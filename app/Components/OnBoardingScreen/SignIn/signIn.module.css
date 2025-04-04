@@ -1,62 +1,17 @@
-.signinmain{
-    height: 100vh;
-}
-.submain {
-    display: flex;
-}
-.division1 {
-    background-color: var(--background-color);
-    /* background-image: url('../../../SetldImages/backgroundframe.png'); */
-    background-repeat: no-repeat;
-    /* background-position: center; */
-    padding: 30px 100px 50px 130px;
-    /* background-size: 95% 100%; */
-    /* background-position: left 5% top 0; */
-    /* border: 2px solid black; */
-    height: 100vh;
-    object-fit: cover;
-}
 
-.division2 {
-    flex: 1;
-    padding: 0vh 0px 230px 0px;
-    height: 100vh;
-}
-.signintxt {
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    font-size: 35px;
-    color: #2C297B;
-    margin-bottom: 30px;
-    margin-top: 40px
-}
-.signuptxt {
-    color: #FFF;
-    font-size: 18px;
-    /* font-style: normal; */
-    font-weight: 100;
-    line-height: 28px;
-    /* 155.556% */
-    letter-spacing: 0.72px;
-    margin-top: 40px;
-    /* display: flex;
-    justify-content: center; */
-    /* padding-left: 100px; */
-}
-.condent {
-    background-color: #FFF;
-    /* height: 762px; */
-    width: 530px;
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    padding: 10px 80px 15px 80px;
-    border-radius: 12px;
-    border: 1px solid black;
-}
-.forgetpasstxt  {
+
+.leftPanel {
+    background-color:var(--background-color);
+  }
+  .loginHeading {
+    color:var(--background-color);
+  }
+
+  
+
+
+
+.forgetpasstxt {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -68,308 +23,51 @@
 }
 
 
-.signupbutton {
+.loginbutton {
     background-color: #2C297B;
     color: #FFF;
     padding: 10px;
     margin-top: 30px;
     border-radius: 5px;
-}
-
-
-.donthaveacctxt {
-    color: #7A7A7A;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    border: none;
+    font-weight: 500;
     font-size: 16px;
-    margin-top: 56px;
-    display: flex;
-    justify-content: center;
-}
-
-.donthaveacctxt>span {
-    color: #184BFF;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.termstxt {
-    color: #184BFF;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    text-decoration: underline;
-    cursor: pointer;
+.loginbutton:hover {
+    background-color: #1f1d5e; /* slightly darker on hover */
 }
 
-.review {
-    color: #184BFF;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-
-.signupimage{
-    width: 700px;
-    height: 500px;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-}
-.floatingGroup {
-    position: relative;
-    height: 60px;
-    /* Adjust based on your design */
-    margin-bottom: 1.5rem;
-}
-.modelmain{
-    padding: 40px 100px 100px 100px;
-}
-
-.verify {
-    font-size: 28px;
-    font-weight: 700;
-    color: #2C297B;
-}
-
-.verifytxt {
-    font-size: 12px;
-    font-weight: 400;
-    display: flex;
-    text-align: center;
-}
-
-.otpfield {
-    display: flex;
-    justify-content: center;
-}
-
-.codeactive {
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 400;
-    margin-top: 20px;
-}
-.codeactive>span{
-    color: red;
-    font-weight: 500;
-    font-size: 13px;
-}
-
-.verifybutton {
-    background-color: #2C297B;
-    width: 100%;
-    color: #fff;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 6px;
-    margin-top: 40px;
+.loginbutton:disabled {
+    background-color: #a0a0c0;
+    cursor: not-allowed;
 }
 
 
 
 
-/* Tablet screens */
-@media (max-width: 768px) {
-
-    .signinmain{
-        height: 100vh;
-        /* border: 2px solid black; */
-    }
-
-    .submain {
-        display: flex;
-    }
-    .division1 {
-        /* padding: 100px 50px 30px 66px; */
-        background-size: 100% 100%;
-        background-position: center;
-        /* border: 2px solid black; */
-        flex: 1;
-        height: 100vh;
-
-    }
-
-    .division2 {
-        /* padding: 60vh 0px 150px 0px; */
-        /* display: none; */
-        flex: 1;
-        /* border: 2px solid black; */
-        height: 100vh;
 
 
-    }
-    .signupimage{
-        display: none;
-    }
-    .signuptxt{
-        display: none;
-    }
+.rightPanel {
+    background-color: white; /* default on large screens */
+  }
 
-    .signintxt {
-        font-size: 36px;
-        margin-bottom: 20px;
-        margin-top: 10px;
+@media (max-width: 991.98px) {
+    .rightPanel {
+      background-color: #2C2A64;
     }
+  
+    .rightPanel :global(form) {
+      background-color: white;
+      border-radius: 0.75rem;
+      padding: 2rem;
+    }
+  
+    .loginHeading {
+      color: #2C2A64;
+    }
+    
+  }
 
-    .signuptxt {
-        font-size: 16px;
-        padding-left: 50px;
-    }
-
-    .condent {
-        padding: 25px 70px 25px 70px;
-        /* width: 100vw; */
-        width: 500px;
-        left: 49%;
-        top: 49%;
-    }
-
-    .signupbutton {
-        margin-top: 30px;
-    }
-
-    .donthaveacctxt,
-    .termstxt,
-    .review {
-        font-size: 16px;
-    }
-    .donthaveacctxt{
-        margin-top: 10px;
-    }
-
-    .modelmain {
-        padding: 20px 40px;
-    }
-
-    .verify {
-        font-size: 24px;
-    }
-
-    .verifytxt {
-        font-size: 14px;
-    }
-
-    .otpfield input {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.25rem;
-    }
-
-    .codeactive {
-        font-size: 14px;
-    }
-
-    .codeactive > span {
-        font-size: 14px;
-    }
-
-    .verifybutton {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-
-/* Mobile screens */
-@media (max-width: 576px) {
-    .signinmain{
-        height: 100vh;
-        /* border: 2px solid black; */
-    }
-    .division1 {
-        /* padding: 80px 20px 20px 0px;
-        background-size: cover; */
-        display: none;
-    }
-
-    .division2 {
-        /* padding: 50vh 0px 100px 0px; */
-        display: none;
-    }
-
-    .signintxt {
-        font-size: 28px;
-        margin-bottom: 30px;
-    }
-
-    .signuptxt {
-        font-size: 14px;
-        padding-left: 20px;
-        margin-top: 50px;
-    }
-
-    .condent {
-        padding: 40px 20px 40px 20px;
-        width: 90vw;
-        max-width: 320px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 8%;
-    }
-
-    .signupbutton {
-        margin-top: 30px;
-        padding: 8px;
-    }
-
-    .donthaveacctxt,
-    .termstxt,
-    .review {
-        font-size: 14px;
-    }
-
-    .floatingGroup {
-        height: 50px;
-    }
-
-    .floatingInput {
-        font-size: 14px;
-        height: 48px;
-    }
-
-    .floatingLabel {
-        font-size: 1.1em;
-    }
-
-    .modelmain {
-        padding: 15px 20px;
-    }
-
-    .verify {
-        font-size: 20px;
-    }
-
-    .verifytxt {
-        font-size: 12px;
-    }
-
-    .otpfield input {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.25rem;
-    }
-
-    .codeactive {
-        font-size: 12px;
-    }
-
-    .codeactive > span {
-        font-size: 12px;
-    }
-
-    .verifybutton {
-        font-size: 12px;
-        padding: 8px;
-    }
-}
